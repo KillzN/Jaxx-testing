@@ -33,7 +33,7 @@ let handler = async (m, { conn, usedPrefix, command, text }) => {
 
     } else {
 
-        if (!text) { return conn.reply(m.chat, `🙂‍↔️ *Ingrese su petición*\n🍁 *Ejemplo de uso:* ${usedPrefix + command} Como Hacer Una flor`, m, rcanal) }
+        if (!text) { return conn.reply(m.chat, `🙂‍↔️ *Ingrese su petición*\n🍁 *Ejemplo de uso:* ${usedPrefix + command} Como Hacer Una flor`, m) }
 
         await m.react('💬')
 

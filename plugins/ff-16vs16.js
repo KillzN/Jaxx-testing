@@ -72,7 +72,7 @@ let handler = async (m, { conn, args }) => {
 
   let msg = await conn.sendMessage(m.chat, { text: plantilla }, { quoted: m })
 
-  partidasVS4[msg.key.id] = {
+  partidasVS16[msg.key.id] = {
     chat: m.chat,
     jugadores: [],
     suplentes: [],
@@ -99,7 +99,7 @@ conn.ev.on('messages.upsert', async ({ messages }) => {
   let emoji = reaction.text
   let sender = m.key.participant || m.key.remoteJid
 
-  let data = partidasVS4[key.id]
+  let data = partidasVS16[key.id]
   if (!data) return
 
   let emojisParticipar = ['❤️', '❤', '♥', '🧡', '💛', '💚', '💙', '💜', '🖤', '🤍', '🤎', '❤️‍🔥']
