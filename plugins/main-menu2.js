@@ -72,7 +72,7 @@ let handler = async (m, { conn }) => {
 		},
 		"participant": "0@s.whatsapp.net"
 	}
-	await conn.sendFile(m.chat, img, 'img.jpg', texto, m, null, rcanal, fkontak)
+	await conn.sendFile(m.chat, img, 'img.jpg', texto, m, null, fkontak)
 }
 handler.help = ['menu2']
 handler.tags = ['main', 'audio']

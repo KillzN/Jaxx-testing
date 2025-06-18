@@ -41,7 +41,7 @@ let handler = async (m, { isPrems, conn }) => {
 		},
 		"participant": "0@s.whatsapp.net"
 	}
-	await conn.sendFile(m.chat, img, 'img.jpg', texto, m, null, rcanal, fkontak)
+	await conn.sendFile(m.chat, img, 'img.jpg', texto, m, null, fkontak)
 }
 handler.help = ['menuff', 'menu4']
 handler.tags = ['freefire', 'main']

@@ -1,6 +1,6 @@
 const handler = async (m, { conn, command, text, usedPrefix }) => {
   global.db.data.users[m.sender].exp += 500;
-  if (!text) return conn.reply(m.chat, `💜 Mensiona a un Usuario.`, m, rcanal, );
+  if (!text) return conn.reply(m.chat, `💜 Mensiona a un Usuario.`, m,);
   const percentages = (500).getRandom();
   let emoji = '';
   let description = '';
@@ -25,8 +25,8 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
         description = `💗 Los cálculos han arrojado que ${text.toUpperCase()} es *${percentages}%* ${command} ${emoji}\n> ✰ Mantén el amor floreciendo!`;
       }
       break;
-      case 'peruano':
-      case 'peruana':
+    case 'peruano':
+    case 'peruana':
       emoji = '🇵🇪';
       if (percentages < 50) {
         description = `🤢 Los cálculos han arrojado que ${text.toUpperCase()} es *${percentages}%* ${command} ${emoji}\n> ✰ Despegala De Aqui Cacorro!`;
@@ -79,9 +79,9 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
         description = `👑 Los cálculos han arrojado que ${text.toUpperCase()} es *${percentages}%* ${command} ${emoji}\n> ✰ Come queso con responsabilidad!`;
       }
       break;
-      case 'mamagb':
-      case 'mamawebo':
-      case 'mmgv':
+    case 'mamagb':
+    case 'mamawebo':
+    case 'mmgv':
       emoji = '🍆';
       if (percentages < 50) {
         description = `🏳️‍🌈 Los cálculos han arrojado que ${text.toUpperCase()} es *${percentages}%* ${command} ${emoji}\n> ✰ Ni Mia Khalifa Mamaba Tanto!`;
@@ -102,7 +102,7 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
         description = `✨️ Los cálculos han arrojado que ${text.toUpperCase()} es *${percentages}%* ${command} ${emoji}\n> ✰ Siempre es hora de negocios!`;
       }
       break;
-      default:
+    default:
       m.reply(`☁️ Comando inválido.`);
   }
   const responses = [
@@ -115,23 +115,23 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
 
 ${description}
 
-➤ ${response}`.trim()  
+➤ ${response}`.trim()
   async function loading() {
-var hawemod = [
-"《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
-"《 ████▒▒▒▒▒▒▒▒》30%",
-"《 ███████▒▒▒▒▒》50%",
-"《 ██████████▒▒》80%",
-"《 ████████████》100%"
-]
-   let { key } = await conn.sendMessage(m.chat, {text: `🤍 ¡Calculando Porcentaje!`, mentions: conn.parseMention(cal)}, {quoted: m})
- for (let i = 0; i < hawemod.length; i++) {
-   await new Promise(resolve => setTimeout(resolve, 1000)); 
-   await conn.sendMessage(m.chat, {text: hawemod[i], edit: key, mentions: conn.parseMention(cal)}, {quoted: m}); 
+    var hawemod = [
+      "《 █▒▒▒▒▒▒▒▒▒▒▒》10%",
+      "《 ████▒▒▒▒▒▒▒▒》30%",
+      "《 ███████▒▒▒▒▒》50%",
+      "《 ██████████▒▒》80%",
+      "《 ████████████》100%"
+    ]
+    let { key } = await conn.sendMessage(m.chat, { text: `🤍 ¡Calculando Porcentaje!`, mentions: conn.parseMention(cal) }, { quoted: m })
+    for (let i = 0; i < hawemod.length; i++) {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      await conn.sendMessage(m.chat, { text: hawemod[i], edit: key, mentions: conn.parseMention(cal) }, { quoted: m });
+    }
+    await conn.sendMessage(m.chat, { text: cal, edit: key, mentions: conn.parseMention(cal) }, { quoted: m });
   }
-  await conn.sendMessage(m.chat, {text: cal, edit: key, mentions: conn.parseMention(cal)}, {quoted: m});         
- }
-loading()    
+  loading()
 };
 handler.help = ['gay <@tag> | <nombre>', 'mmgv <@tag> | <nombre>', 'mamawebo <@tag> | <nombre>', 'mamagb <@tag> | <nombre>', 'lesbiana <@tag> | <nombre>', 'pajero <@tag> | <nombre>', 'peruano <@tag> | <nombre>', 'peruana <@tag> | <nombre>', 'pajera <@tag> | <nombre>', 'puto <@tag> | <nombre>', 'puta <@tag> | <nombre>', 'manco <@tag> | <nombre>', 'manca <@tag> | <nombre>', 'rata <@tag> | <nombre>', 'prostituta <@tag> | <nombre>', 'prostituto <@tag> | <nombre>'];
 handler.tags = ['fun'];
