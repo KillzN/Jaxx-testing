@@ -27,7 +27,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   const image = await res.getRandom();
   const link = image;
 
-  conn.sendFile(m.chat, link, 'error.jpg', `*🔎 Resultado De: ${text}*\n> ${textbot}`, m, null, rcanal);
+  conn.sendFile(m.chat, link, 'error.jpg', `*🔎 Resultado De: ${text}*\n> ${textbot}`, m, null);
 };
 
 handler.help = ['imagen <query>'];
