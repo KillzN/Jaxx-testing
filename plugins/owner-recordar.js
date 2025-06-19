@@ -1,6 +1,6 @@
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!text) throw '⚠️ *_Ingrese el tiempo y el motivo para el recordatorio. Ejemplo: .recordar 2-H Motivo_*';
-    
+
     let [time, ...reasonArr] = text.split(' ');
     if (!time || !reasonArr.length) throw '⚠️ *_Debe especificar el tiempo y el motivo. Ejemplo: .recordar 2-H Motivo_*';
 
@@ -49,6 +49,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
 handler.help = ['recordar'];
 handler.tags = ['main'];
 handler.command = ['recordar'];
-handler.owner = true;
+global.owner = [
+    ['56983073328', 'Mvrco', true]
+]
 
 export default handler;

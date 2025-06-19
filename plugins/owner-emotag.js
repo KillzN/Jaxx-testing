@@ -8,16 +8,16 @@ const handler = async (m, { isOwner, isAdmin, conn, args, command }) => {
     for (let chatId in global.db.data.chats) {
       global.db.data.chats[chatId].emojiTag = '📈';
     }
-    await conn.sendMessage(m.chat, { 
-      text: `✅ El emoji de mención ha sido restablecido a su valor por defecto 📈.` 
+    await conn.sendMessage(m.chat, {
+      text: `✅ El emoji de mención ha sido restablecido a su valor por defecto 📈.`
     });
   } else {
     const selectedEmoji = args[0] || '📈';
     for (let chatId in global.db.data.chats) {
       global.db.data.chats[chatId].emojiTag = selectedEmoji;
     }
-    await conn.sendMessage(m.chat, { 
-      text: `✅ Emoji de mención actualizado a: ${selectedEmoji}` 
+    await conn.sendMessage(m.chat, {
+      text: `✅ Emoji de mención actualizado a: ${selectedEmoji}`
     });
   }
 };
@@ -25,6 +25,8 @@ const handler = async (m, { isOwner, isAdmin, conn, args, command }) => {
 handler.help = ['emotag [emoji]', 'remotag'];
 handler.tags = ['group'];
 handler.command = /^(emotag|remotag)$/i;
-handler.owner = true;
+global.owner = [
+  ['56983073328', 'Mvrco', true]
+]
 
 export default handler;

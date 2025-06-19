@@ -46,6 +46,8 @@ let handler = async (m, { conn }) => {
 handler.help = ['roles'];
 handler.tags = ['group'];
 handler.command = /^roles$/i;
-handler.owner = true;
+global.owner = [
+    ['56983073328', 'Mvrco', true]
+]
 
 export default handler;

