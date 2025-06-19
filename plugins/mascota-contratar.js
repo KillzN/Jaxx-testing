@@ -27,14 +27,14 @@ let handler = async (m, { conn, args }) => {
     return;
   }
 
-  // Verificar si tiene suficientes dulces
+  // Verificar si tiene suficientes creds
   const precio = empleadoPrecios[empleadoElegido];
   if (user.limit < precio) {
-    m.reply(`No tienes suficientes dulces para contratar a *${empleadoElegido}*. Necesitas *${precio} 🍬 dulces*.`);
+    m.reply(`No tienes suficientes creds para contratar a *${empleadoElegido}*. Necesitas *${precio} 🪙 Creds*.`);
     return;
   }
 
-  // Contratar al empleado y restar los dulces
+  // Contratar al empleado y restar los creds
   user.limit -= precio;
   user.empleado = empleadoElegido;
   m.reply(`¡Felicidades! Has contratado a *${empleadoElegido}* 🧑‍💼.`);

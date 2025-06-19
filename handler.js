@@ -423,7 +423,7 @@ ${user.bannedReason}` : '💌 *Motivo:* Sin Especificar'}\n\n⚠️ *Si este bot
             }
           }
           if (m.limit)
-            conn.reply(m.chat, `Utilizaste *${+m.limit}* 🍬`, m, fake)
+            conn.reply(m.chat, `Utilizaste *${+m.limit}* 🪙`, m, fake)
         }
         break
       }

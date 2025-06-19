@@ -28,7 +28,7 @@ async function verificarVidaYAlimentarMascota(conn) {
       }
 
       if (user.limit < 10) {
-        let mensaje = `⚠️ *No tienes suficientes dulces para que tu empleado cuide a tu mascota. Necesitas 10 dulces.*`;
+        let mensaje = `⚠️ *No tienes suficientes creds para que tu empleado cuide a tu mascota. Necesitas 10 creds.*`;
         await conn.sendMessage(chatDestino, { text: mensaje });
         continue;
       }
@@ -37,7 +37,7 @@ async function verificarVidaYAlimentarMascota(conn) {
       user.vida = 100;
       user.limit -= 10;
 
-      let mensaje = `✅ *Tu empleado alimentó a tu mascota y la cuidó. Ha recuperado toda su vida.*\n💰 *Se han descontado 10 dulces por sus cuidados.*`;
+      let mensaje = `✅ *Tu empleado alimentó a tu mascota y la cuidó. Ha recuperado toda su vida.*\n💰 *Se han descontado 10 creds por sus cuidados.*`;
       await conn.sendMessage(chatDestino, { text: mensaje });
     }
   }

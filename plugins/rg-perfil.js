@@ -20,7 +20,7 @@ let handler = async (m, { conn, usedPrefix, command }) => {
   let txt = `👤「 *User Perfil* 」⬣\n`
   txt += `*🪴 Nombre ∙* ${name}\n`
   txt += `*📞 Numero ∙* ${PhoneNumber('+' + who.replace('@s.whatsapp.net', '')).getNumber('international')}\n`
-  txt += `*🍬 Dulces ∙* ${limit}\n`
+  txt += `*🪙 Creds ∙* ${limit}\n`
   txt += `*💫 Experiencia ∙* Total ${exp} ( *${user.exp - min}/${xp}* )\n`
   txt += `*🚩 Nivel ∙* ${level}`
 

@@ -1,5 +1,5 @@
 const handler = async (m, { conn }) => {
-  const texto = `🐾 *Requisitos y Recompensas de las Batallas de Mascotas* 🐾
+   const texto = `🐾 *Requisitos y Recompensas de las Batallas de Mascotas* 🐾
 
 🔹 *Batalla 1*:
    • 500 XP  
@@ -17,11 +17,11 @@ const handler = async (m, { conn }) => {
 
 🔹 *Batalla 3*:
    • 500 XP  
-   • 10 Dulces  
+   • 10 creds  
    • El nivel del usuario debe ser igual o mayor al de su mascota  
    🎁 *Ganas:*  
    • 2x XP Apostado  
-   • 2x Dulces Apostados  
+   • 2x creds Apostados  
 
 🔹 *Batalla 4*:
    • Apuestas tu mascota y si pierdes, pierde completamente su nivel ☠️  
@@ -32,7 +32,7 @@ Para desafiar a alguien, usa:
 📌 *batalla <tipo> @usuario*  
 Ejemplo: *batalla 1 @usuario*`;
 
-  await m.reply(texto);
+   await m.reply(texto);
 };
 
 handler.help = ['batallainfo'];

@@ -326,8 +326,8 @@ let handler = async (m, { isPrems, conn }) => {
 ┣━━━━━━━━━━━━━━┫  
 ┃⋗ 💼 *.claim*  
 ┃⋗ 💼 *.crimen*  
-┃⋗ 🍬 *.dardulces *@user <cantidad>*  
-┃⋗ 🍬 *.dulces*  
+┃⋗ 🪙 *.darcreds *@user <cantidad>*  
+┃⋗ 🪙 *.creds*  
 ┃⋗ ⚡ *.levelup*  
 ┃⋗ ⛏️ *.minar*  
 ┃⋗ 🛍️ *.Buy*  

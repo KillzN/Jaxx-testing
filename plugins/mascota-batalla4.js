@@ -48,13 +48,13 @@ const handler = async (m, { conn, args }) => {
   perdedor.mascota = null;
   perdedor.mascotaNivel = 0;
 
-  // El ganador recibe 50 dulces del límite del perdedor
-  const dulcesGanador = 50;
-  if (perdedor.limit >= dulcesGanador) {
-    ganador.limit += dulcesGanador;
-    perdedor.limit -= dulcesGanador;
+  // El ganador recibe 50 creds del límite del perdedor
+  const credsGanador = 50;
+  if (perdedor.limit >= credsGanador) {
+    ganador.limit += credsGanador;
+    perdedor.limit -= credsGanador;
   } else {
-    // Si no tiene suficientes dulces, solo se transfieren todos los dulces
+    // Si no tiene suficientes creds, solo se transfieren todos los creds
     ganador.limit += perdedor.limit;
     perdedor.limit = 0;
   }
@@ -97,10 +97,10 @@ const handler = async (m, { conn, args }) => {
 
   // Construir mensaje usando @user en la mención
   let teks = `⚔️ *Batalla 4 - Duelo de Apuestas* ⚔️  
-🎉 ¡Felicidades ${ganadorTag}! Has ganado la batalla y ahora posees 50 dulces del perdedor.  
+🎉 ¡Felicidades ${ganadorTag}! Has ganado la batalla y ahora posees 50 creds del perdedor.  
 ☠️ ${perdedorTag} ha perdido su mascota completamente.  
 📥 *Recompensas para ${ganadorTag}:*  
-• 50 dulces del límite del perdedor  
+• 50 creds del límite del perdedor  
 • ⚠️ Su mascota ha perdido 50 de vida en la batalla (vida restante: ${ganador.vida})`;
 
   // Definir las menciones para que el mensaje sea interactivo

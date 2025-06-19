@@ -8,7 +8,7 @@ const mascotaPrecios = {
   '🐶 Perro': 50,
   '🐧 Pingüino': 50,
   '🐹 Hámster': 60,
-  '🐒 Simio': 70, 
+  '🐒 Simio': 70,
   '🦅 Águila': 80,
   '🐊 Cocodrilo': 90,
   '🐺 Lobo': 100,
@@ -19,13 +19,13 @@ const mascotaPrecios = {
 let handler = async (m, { conn, args }) => {
   const user = global.db.data.users[m.sender];
   const mascotaElegida = args.join(' ') || '';
-   
+
   if (mascotaPrecios[mascotaElegida] && user.level < 1) {
     m.reply(`Eres nivel *${user.level}* ❌. Necesitas ser al menos *nivel 1* para comprar la mascota *${mascotaElegida}*.\n\nUsa *levelup* para subir de nivel y obtener tu mascota.`);
     return;
   }
 
-   if (!mascotaElegida || !mascotaPrecios[mascotaElegida]) {
+  if (!mascotaElegida || !mascotaPrecios[mascotaElegida]) {
     m.reply(`Por favor, elige una mascota válida. Usa el comando de la siguiente forma:\n
 *mimascota 🐤 Pollito*\n
 *mimascota 🦜 Loro*\n
@@ -52,7 +52,7 @@ let handler = async (m, { conn, args }) => {
 
   const precio = mascotaPrecios[mascotaElegida];
   if (user.limit < precio) {
-    m.reply(`No tienes suficientes dulces para comprar esta mascota. Necesitas *${precio} 🍬 dulces* para comprar un *${mascotaElegida}*.`);
+    m.reply(`No tienes suficientes creds para comprar esta mascota. Necesitas *${precio} 🪙 Creds* para comprar un *${mascotaElegida}*.`);
     return;
   }
 

@@ -1,19 +1,19 @@
-let handler = async (m, { conn }) => {  
-  const user = global.db.data.users[m.sender];  
+let handler = async (m, { conn }) => {
+  const user = global.db.data.users[m.sender];
 
-  if (!user.mascota) {    
-    m.reply(`❌ No tienes una mascota. Usa el comando *mimascota* para obtener una.`);    
-    return;  
-  }  
+  if (!user.mascota) {
+    m.reply(`❌ No tienes una mascota. Usa el comando *mimascota* para obtener una.`);
+    return;
+  }
 
   const costoCambioNombre = 50;
   if (user.limit < costoCambioNombre) {
-    m.reply(`❌ No tienes suficientes dulces para cambiar el nombre de tu mascota. Necesitas ${costoCambioNombre} dulces.`);
+    m.reply(`❌ No tienes suficientes creds para cambiar el nombre de tu mascota. Necesitas ${costoCambioNombre} creds.`);
     return;
   }
 
   const nombreMascota = user.mascota;
-  const emojiMascota = nombreMascota.split(' ')[0]; 
+  const emojiMascota = nombreMascota.split(' ')[0];
   const nombreActual = nombreMascota.split(' ').slice(1).join(' ');
 
   const args = m.text.split(' ').slice(1);
@@ -37,7 +37,7 @@ let handler = async (m, { conn }) => {
   user.mascota = emojiMascota + ' ' + nuevoNombre;
   user.limit -= costoCambioNombre;
 
-  m.reply(`✅ El nombre de tu mascota ha sido cambiado a *${user.mascota}*. Has pagado ${costoCambioNombre} dulces.`);
+  m.reply(`✅ El nombre de tu mascota ha sido cambiado a *${user.mascota}*. Has pagado ${costoCambioNombre} creds.`);
 };
 
 handler.help = ['nombre'];

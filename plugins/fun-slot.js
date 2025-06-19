@@ -1,17 +1,17 @@
 let cooldowns = {};
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) return m.reply('🍭 Ingresa la cantidad de *🍬 Dulces* que deseas apostar.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* 10`);
-    if (isNaN(args[0])) return m.reply('🍭 Ingresa la cantidad de *🍬 Dulces* que deseas apostar.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* 10`);
-    
+    if (!args[0]) return m.reply('🍭 Ingresa la cantidad de *🪙 Creds* que deseas apostar.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* 10`);
+    if (isNaN(args[0])) return m.reply('🍭 Ingresa la cantidad de *🪙 Creds* que deseas apostar.\n\n`Ejemplo:`\n' + `> *${usedPrefix + command}* 10`);
+
     let apuesta = parseInt(args[0]);
     let users = global.db.data.users[m.sender];
 
     if (apuesta > users.limit) {
-        return m.reply(`😔 No tienes suficientes *🍬 Dulces* para apostar.\nActualmente tienes: *${users.limit} 🍬 Dulces*`);
+        return m.reply(`😔 No tienes suficientes *🪙 Creds* para apostar.\nActualmente tienes: *${users.limit} 🪙 Creds*`);
     }
 
-    let tiempoEspera = 15;	    
+    let tiempoEspera = 15;
     if (cooldowns[m.sender] && Date.now() - cooldowns[m.sender] < tiempoEspera * 1000) {
         let tiempoRestante = segundosAHMS(Math.ceil((cooldowns[m.sender] + tiempoEspera * 1000 - Date.now()) / 1000));
         return m.reply(`⏱ Espera *${tiempoRestante}* para apostar nuevamente.`);
@@ -41,18 +41,18 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
 
     let end;
     if (a == b && b == c) {
-        end = `🎉 ¡Felicidades! Acabas de ganar *${apuesta} 🍬 Dulces*.`;
+        end = `🎉 ¡Felicidades! Acabas de ganar *${apuesta} 🪙 Creds*.`;
         users.limit += apuesta;
     } else if (a == b || a == c || b == c) {
-        end = `Casi lo logras, sigue intentando 😊\n¡Ten *1 🍬 Dulce*!`;
+        end = `Casi lo logras, sigue intentando 😊\n¡Ten *1 🪙 Dulce*!`;
         users.limit += 1;
     } else {
-        end = `😢 Perdiste *${apuesta} 🍬 Dulces*. ¡Mejor suerte la próxima vez!`;
+        end = `😢 Perdiste *${apuesta} 🪙 Creds*. ¡Mejor suerte la próxima vez!`;
         users.limit -= apuesta;
     }
 
     cooldowns[m.sender] = Date.now();
-    return await conn.reply(m.chat, 
+    return await conn.reply(m.chat,
         `
   🎰 | *SLOTS* 
 ──────────

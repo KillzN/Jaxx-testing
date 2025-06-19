@@ -23,9 +23,9 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
     user.regTime = + new Date
     user.registered = true
 
-    // Agrega 10 dulces al registro en la base de datos "limit"
+    // Agrega 10 creds al registro en la base de datos "limit"
     if (!user.limit) user.limit = 0; // Asegurarse de que exista la propiedad
-    user.limit += 10; // Sumar 10 dulces
+    user.limit += 10; // Sumar 10 creds
 
     let sn = createHash('md5').update(m.sender).digest('hex').slice(0, 6)
     m.react('📩')
@@ -33,7 +33,7 @@ let handler = async function (m, { conn, text, usedPrefix, command }) {
     let regbot = `🗃️ *R E G I S T R A D O* 🗃️\n
 💌 *Nombre:* ${name}
 📆 *Edad* : ${age} años
-🍬 *Dulces añadidos:* 10`
+🪙 *creds añadidos:* 10`
 
     await conn.sendMessage(m.chat, {
         image: { url: pp },

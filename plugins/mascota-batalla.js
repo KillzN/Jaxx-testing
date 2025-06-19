@@ -42,18 +42,18 @@ const handler = async (m, { conn, args }) => {
   }
 
   const tipoBatalla = args[0];
-  let apuestaComida, apuestaExp, apuestaDulces, vidaGanador, vidaPerdedor;
+  let apuestaComida, apuestaExp, apuestacreds, vidaGanador, vidaPerdedor;
 
   if (tipoBatalla === '1') {
     apuestaComida = 5;
     apuestaExp = 500;
-    apuestaDulces = 0;
+    apuestacreds = 0;
     vidaGanador = 10;  // Vida que pierde el ganador
     vidaPerdedor = 20; // Vida que pierde el perdedor
   } else if (tipoBatalla === '2') {
     apuestaComida = 10;
     apuestaExp = 1000;
-    apuestaDulces = 0;
+    apuestacreds = 0;
     vidaGanador = 20;  // Vida que pierde el ganador
     vidaPerdedor = 30; // Vida que pierde el perdedor
   } else if (tipoBatalla === '3') {
@@ -68,7 +68,7 @@ const handler = async (m, { conn, args }) => {
     }
     apuestaComida = 0;
     apuestaExp = 500;
-    apuestaDulces = 10;
+    apuestacreds = 10;
     vidaGanador = 30;  // Vida que pierde el ganador
     vidaPerdedor = 40; // Vida que pierde el perdedor
   } else {
@@ -76,22 +76,22 @@ const handler = async (m, { conn, args }) => {
     return;
   }
 
-  if (user1.comida < apuestaComida || user1.exp < apuestaExp || user1.dulces < apuestaDulces) {
+  if (user1.comida < apuestaComida || user1.exp < apuestaExp || user1.creds < apuestacreds) {
     m.reply('❌ No tienes suficientes recursos para participar en la batalla.');
     return;
   }
 
-  if (user2.comida < apuestaComida || user2.exp < apuestaExp || user2.dulces < apuestaDulces) {
+  if (user2.comida < apuestaComida || user2.exp < apuestaExp || user2.creds < apuestacreds) {
     m.reply('❌ El usuario mencionado no tiene suficientes recursos para participar en la batalla.');
     return;
   }
 
   user1.comida -= apuestaComida;
   user1.exp -= apuestaExp;
-  user1.dulces -= apuestaDulces;
+  user1.creds -= apuestacreds;
   user2.comida -= apuestaComida;
   user2.exp -= apuestaExp;
-  user2.dulces -= apuestaDulces;
+  user2.creds -= apuestacreds;
 
   const resultado = Math.random();
 
@@ -102,9 +102,9 @@ const handler = async (m, { conn, args }) => {
 
     user1.comida += 2 * apuestaComida;
     user1.exp += 2 * apuestaExp;
-    user1.dulces += 2 * apuestaDulces;
+    user1.creds += 2 * apuestacreds;
 
-    const texto = `🎉 ¡Felicidades @${m.sender.split('@')[0]}! Tu *${user1.mascota}* ha derrotado al *${user2.mascota}* de @${mentionedJid.split('@')[0]}.\n\n😼 *Victoria:*\n• Comida: ${2 * apuestaComida}\n• Experiencia: ${2 * apuestaExp}\n• Dulces: ${2 * apuestaDulces}\n\n💔 *Perdida de vida:*\n• Ganador: -${vidaGanador} Vida\n• Perdedor: -${vidaPerdedor} Vida`;
+    const texto = `🎉 ¡Felicidades @${m.sender.split('@')[0]}! Tu *${user1.mascota}* ha derrotado al *${user2.mascota}* de @${mentionedJid.split('@')[0]}.\n\n😼 *Victoria:*\n• Comida: ${2 * apuestaComida}\n• Experiencia: ${2 * apuestaExp}\n• creds: ${2 * apuestacreds}\n\n💔 *Perdida de vida:*\n• Ganador: -${vidaGanador} Vida\n• Perdedor: -${vidaPerdedor} Vida`;
     await conn.sendMessage(m.chat, { text: texto, mentions: [m.sender, mentionedJid] });
   } else if (resultado < 0.7) {
     // El ganador pierde vida
@@ -113,19 +113,19 @@ const handler = async (m, { conn, args }) => {
 
     user2.comida += 2 * apuestaComida;
     user2.exp += 2 * apuestaExp;
-    user2.dulces += 2 * apuestaDulces;
+    user2.creds += 2 * apuestacreds;
 
-    const texto = `🎉 ¡Felicidades @${mentionedJid.split('@')[0]}! Tu *${user2.mascota}* ha derrotado al *${user1.mascota}* de @${m.sender.split('@')[0]}.\n\n😼 *Victoria:*\n• Comida: ${2 * apuestaComida}\n• Experiencia: ${2 * apuestaExp}\n• Dulces: ${2 * apuestaDulces}\n\n💔 *Perdida de vida:*\n• Ganador: -${vidaGanador} Vida\n• Perdedor: -${vidaPerdedor} Vida`;
+    const texto = `🎉 ¡Felicidades @${mentionedJid.split('@')[0]}! Tu *${user2.mascota}* ha derrotado al *${user1.mascota}* de @${m.sender.split('@')[0]}.\n\n😼 *Victoria:*\n• Comida: ${2 * apuestaComida}\n• Experiencia: ${2 * apuestaExp}\n• creds: ${2 * apuestacreds}\n\n💔 *Perdida de vida:*\n• Ganador: -${vidaGanador} Vida\n• Perdedor: -${vidaPerdedor} Vida`;
     await conn.sendMessage(m.chat, { text: texto, mentions: [m.sender, mentionedJid] });
   } else {
     user1.comida += apuestaComida / 2;
     user1.exp += apuestaExp / 2;
-    user1.dulces += apuestaDulces / 2;
+    user1.creds += apuestacreds / 2;
     user2.comida += apuestaComida / 2;
     user2.exp += apuestaExp / 2;
-    user2.dulces += apuestaDulces / 2;
+    user2.creds += apuestacreds / 2;
 
-    const texto = `🤝 La batalla ha terminado en empate. Ambos usuarios @${m.sender.split('@')[0]} y @${mentionedJid.split('@')[0]} recuperan el 50% de su apuesta.\n\n🟠 **Lo que ambos ganaron:**\n• Comida: ${apuestaComida / 2}\n• Experiencia: ${apuestaExp / 2}\n• Dulces: ${apuestaDulces / 2}`;
+    const texto = `🤝 La batalla ha terminado en empate. Ambos usuarios @${m.sender.split('@')[0]} y @${mentionedJid.split('@')[0]} recuperan el 50% de su apuesta.\n\n🟠 **Lo que ambos ganaron:**\n• Comida: ${apuestaComida / 2}\n• Experiencia: ${apuestaExp / 2}\n• creds: ${apuestacreds / 2}`;
     await conn.sendMessage(m.chat, { text: texto, mentions: [m.sender, mentionedJid] });
   }
 };
