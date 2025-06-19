@@ -16,12 +16,11 @@ global.confirmCode = ''
 
 global.owner = [
   ['56983073328', 'KILLBOT', true],
-  ['56983073328', 'KILLBOTr', true],
   ['56983073328', 'KILLBOT', true],
   ['56983073328', 'KILLBOT', true],
-  ['56983073328', 'KILLBOT', true],
-  ['56983073328', 'KILLBOT', true],
-  ['56983073328', 'KILLBOT', true],
+  ['56983073328'],
+  ['56983073328'],
+  ['56983073328'],
   ['56983073328'],
 ]
 
@@ -45,17 +44,17 @@ global.baileys = '@whiskeysockets/baileys'
 global.vs = '2.0.7'
 global.languaje = 'Español'
 global.nameqr = 'sisked-x'
-global.namebot = 'KILLBOT'
+global.namebot = '@𝖎𝖓𝖊𝖋𝖋𝖆𝖇𝖑𝖊.𝖒𝖛𝖗𝖈𝖔'
 global.sessions = 'KILLBOTSession'
 global.jadi = 'KILLBOTJadiBot'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = 'KILLBOT'
-global.botname = 'KILLBOT'
+global.packname = 'KɪʟʟᴢN'
+global.botname = '@𝖎𝖓𝖊𝖋𝖋𝖆𝖇𝖑𝖊.𝖒𝖛𝖗𝖈𝖔'
 global.wm = '𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱 𝘉𝘰𝘵'
-global.author = 'KILLBOT'
-global.dev = 'KILLBOT'
+global.author = '@𝖎𝖓𝖊𝖋𝖋𝖆𝖇𝖑𝖊.𝖒𝖛𝖗𝖈𝖔'
+global.dev = 'KɪʟʟᴢN'
 global.textbot = '𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱 KILLBOT'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -75,11 +74,11 @@ global.tiktok = 'https://www.tiktok.com/@ineffable.mvrco'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.estilo = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "5219992095479-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount: -999999, status: 1, surface: 1, message: 'Ai Otho - MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net' } } }
+global.estilo = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "56983073328-1625305606@g.us" } : {}) }, message: { orderMessage: { itemCount: -999999, status: 1, surface: 1, message: 'Ai Otho - MD', orderTitle: 'Bang', thumbnail: catalogo, sellerJid: '0@s.whatsapp.net' } } }
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.esti = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "6289643739077-1613049930@g.us" } : {}) }, message: { "videoMessage": { "title": dev, "h": `Hmm`, 'seconds': '99999', 'gifPlayback': 'true', 'caption': `Ai Otho - MD`, 'jpegThumbnail': catalogo } } }
+global.esti = { key: { participant: `0@s.whatsapp.net`, ...(false ? { remoteJid: "56983073328-1613049930@g.us" } : {}) }, message: { "videoMessage": { "title": dev, "h": `Hmm`, 'seconds': '99999', 'gifPlayback': 'true', 'caption': `Ai Otho - MD`, 'jpegThumbnail': catalogo } } }
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
