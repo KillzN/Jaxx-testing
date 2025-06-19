@@ -25,8 +25,6 @@ const handler = async (m, { isOwner, isAdmin, conn, args, command }) => {
 handler.help = ['emotag [emoji]', 'remotag'];
 handler.tags = ['group'];
 handler.command = /^(emotag|remotag)$/i;
-global.owner = [
-  ['56983073328', 'Mvrco', true]
-]
+handler.owner = true;
 
 export default handler;

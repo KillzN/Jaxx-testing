@@ -60,8 +60,6 @@ const handler = async (m, { conn, text }) => {
 handler.help = ['anuncio'];
 handler.tags = ['owner'];
 handler.command = /^(mensajeoficial|anuncio|broadcast)$/i;
-global.owner = [
-  ['56983073328', 'Mvrco', true]
-]
+handler.owner = true;
 
 export default handler;

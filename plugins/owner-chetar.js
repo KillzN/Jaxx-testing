@@ -13,7 +13,5 @@ let handler = async (m, { conn, command }) => {
 handler.help = ['chetar'];
 handler.tags = ['owner'];
 handler.command = ['chetar'];
-global.owner = [
-  ['56983073328', 'Mvrco', true]
-]
+handler.owner = true;
 export default handler
