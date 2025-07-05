@@ -9,20 +9,20 @@ import moment from 'moment-timezone'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.botNumberCode = '' //Ejemplo: +56983073328
+global.botNumberCode = '' //Ejemplo: +56956654814
 global.confirmCode = ''
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
 global.owner = [
-  ['56983073328', 'KILLBOT', true],
-  ['56983073328', 'KILLBOTr', true],
-  ['56983073328', 'KILLBOT', true],
-  ['56983073328', 'KILLBOT', true],
-  ['56983073328', 'KILLBOT', true],
-  ['56983073328', 'KILLBOT', true],
-  ['56983073328', 'KILLBOT', true],
-  ['56983073328'],
+  ['56956654814', 'JaxxBOT', true],
+  ['56956654814', 'JaxxBOTr', true],
+  ['56956654814', 'JaxxBOT', true],
+  ['56956654814', 'JaxxBOT', true],
+  ['56956654814', 'JaxxBOT', true],
+  ['56956654814', 'JaxxBOT', true],
+  ['56956654814', 'JaxxBOT', true],
+  ['56956654814'],
 ]
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
@@ -45,18 +45,18 @@ global.baileys = '@whiskeysockets/baileys'
 global.vs = '2.0.7'
 global.languaje = 'Español'
 global.nameqr = 'sisked-x'
-global.namebot = 'KILLBOT'
-global.sessions = 'KILLBOTSession'
-global.jadi = 'KILLBOTJadiBot'
+global.namebot = 'JaxxBOT'
+global.sessions = 'JaxxSession'
+global.jadi = 'JaxxBOTJadiBot'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = 'KILLBOT'
-global.botname = 'KILLBOT'
+global.packname = 'JaxxBOT'
+global.botname = 'JaxxBOT'
 global.wm = '𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱 𝘉𝘰𝘵'
-global.author = 'KILLBOT'
-global.dev = 'KILLBOT'
-global.textbot = '𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱 KILLBOT'
+global.author = 'JaxxBOT'
+global.dev = 'JaxxBOT'
+global.textbot = '𝘞𝘩𝘢𝘵𝘴𝘈𝘱𝘱 JaxxBOT'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 

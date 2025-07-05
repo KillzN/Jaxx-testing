@@ -29,9 +29,9 @@ handler.all = async function (m, { conn }) {
   }
 
   // Datos básicos
-  global.creador = 'Wa.me/56983073328'
+  global.creador = 'Wa.me/56956654814'
   global.asistencia = 'https://wa.me/qr/PAOHAKCEHGUXN1'
-  global.namechannel = 'KILLBOT'
+  global.namechannel = 'JaxxBOT'
 
   global.rwait = '🕒'
   global.done = '✅'

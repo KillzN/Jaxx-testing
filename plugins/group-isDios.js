@@ -13,7 +13,7 @@ let handler = async (m, { conn, text, participants, usedPrefix, command }) => {
     })();
 
     if (!user) {
-        return conn.reply(m.chat, `🚩 Usa el comando correctamente\n\n*Ejemplo:*\n> ${usedPrefix}${command} @usuario\n> ${usedPrefix}${command} 56983073328\nO responde al mensaje del usuario.`, m);
+        return conn.reply(m.chat, `🚩 Usa el comando correctamente\n\n*Ejemplo:*\n> ${usedPrefix}${command} @usuario\n> ${usedPrefix}${command} 56956654814\nO responde al mensaje del usuario.`, m);
     }
 
     if (!global.db.data.chats[m.chat]) global.db.data.chats[m.chat] = {};

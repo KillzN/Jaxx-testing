@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, participants, usedPrefix, command, isAdmin
 
     if (!text && !m.quoted && (!m.mentionedJid || !m.mentionedJid.length)) {
         return conn.reply(m.chat,
-            `🚩 Usa el comando correctamente\n\n*Ejemplo:*\n> ${usedPrefix}${command} @usuario\n> ${usedPrefix}${command} 56983073328\nO responde al mensaje del usuario.`,
+            `🚩 Usa el comando correctamente\n\n*Ejemplo:*\n> ${usedPrefix}${command} @usuario\n> ${usedPrefix}${command} 56956654814\nO responde al mensaje del usuario.`,
             m
         );
     }
