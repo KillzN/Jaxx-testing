@@ -10,7 +10,7 @@ const handler = async (m, { isOwner, isAdmin, conn, text, participants, args, co
   }
   const pesan = args.join` `;
   const oi = `𝙀𝙏𝙄𝙌𝙐𝙀𝙏𝘼𝙎:* ${pesan}`;
-  let teks = `*> 𝚅𝙸𝚅𝙾 𝙴𝚂𝚃𝙰𝚂 𝚅𝙾𝙹𝙰Ĝ𝙾 𝙽𝙴 𝙲𝙴𝙻𝙾*\n\n *${oi}\n\n➥ _*𝘑𝘢𝘹𝘹 𝘉𝘰𝘵:*_\n`;
+  let teks = `*>𝚅𝙸𝚅𝙾 𝙴𝚂𝚃𝙰𝚂 𝚅𝙾𝙹𝙰Ĝ𝙾 𝙽𝙴 𝙲𝙴𝙻𝙾*\n\n *${oi}\n\n➥ _*𝘑𝘢𝘹𝘹 𝘉𝘰𝘵:*_\n`;
   for (const mem of participants) {
     teks += `*💜 ⇝* @${mem.id.split('@')[0]}\n`;
   }
