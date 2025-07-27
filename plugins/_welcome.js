@@ -12,7 +12,7 @@ export async function before(m, { conn, participants, groupMetadata }) {
   let jid = m.messageStubParameters?.[0] || ''
   if (!jid) return
 
-  let pp = await conn.profilePictureUrl(jid, 'image').catch(_ => 'https://cdn.russellxz.click/d145c3ba.png')
+  let pp = await conn.profilePictureUrl(jid, 'image').catch(_ => 'https://cdn.russellxz.click/27350ce8.png')
   let img = await (await fetch(pp)).buffer()
 
   let user = `@${jid.split('@')[0]}`

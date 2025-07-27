@@ -1,5 +1,5 @@
 let handler = async (m, { isPrems, conn }) => {
-	let img = 'https://cdn.russellxz.clickhttps://cdn.russellxz.click/d145c3ba.png'
+	let img = 'https://cdn.russellxz.clickhttps://cdn.russellxz.click/27350ce8.png'
 	let texto = `╭─ ⭑ *FREE FIRE MENU* ⭑ ─╮
 
 📌 *MAPAS GENERALES*

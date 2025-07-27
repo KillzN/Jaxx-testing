@@ -85,7 +85,7 @@ handler.all = async function (m, { conn }) {
   }
 
   const iconos = [
-    'https://cdn.russellxz.click/d145c3ba.png'
+    'https://cdn.russellxz.click/27350ce8.png'
   ]
   global.icono = iconos[Math.floor(Math.random() * iconos.length)]
 
